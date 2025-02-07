@@ -5,6 +5,7 @@ fetch("./data/destination.json")
 
     sectionElm.innerHTML = 
     data.destinations.map(destination => `
+      <img src="./img/${destination.image}">
         <a href="destination.html?id=${destination.id}">
         ${destination.title}
         </a>`).join("")
