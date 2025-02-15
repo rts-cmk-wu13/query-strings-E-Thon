@@ -6,14 +6,32 @@ console.log(params);
 let id = params.get("id");
 console.log(id);
 
-fetch(`./date/${id}.json`)
+fetch(`./data/${id}.json`)
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
     let bodyElm = document.querySelector("body");
-    let appartment = document.createElement("section");
+    let appartment = document.createElement("div");
+
     appartment.innerHTML = `
-    <img src="${image}">
+    <div class="appartment__div--left">
+      <img src="./img/${data.image}" alt="${data.title}">
+      <p><i class="fa-solid fa-heart"></i> favorit</p>
+    </div>
+
+    <div class="appartment__div--right">
+      <h3>${data.destination}</h3>
+      <h1>${data.title}</h1>
+      <sub>${data.subtitle}</sub>
+      <p>${data.text}</p>
+      <h2>Faciliteter</h2>
+      <ul class="appartment__ul">
+        <li>${data.facilities[0]}</li>
+        <li>${data.facilities[1]}</li>
+        <li>${data.facilities[2]}</li>
+        <li>${data.facilities[3]}</li>
+        </ul>
+    </div>
     `;
 
     bodyElm.appendChild(appartment);
