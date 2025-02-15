@@ -8,4 +8,13 @@ console.log(id);
 
 fetch(`./date/${id}.json`)
   .then((response) => response.json())
-  .then((data) => console.log(data));
+  .then((data) => {
+    console.log(data);
+    let bodyElm = document.querySelector("body");
+    let appartment = document.createElement("section");
+    appartment.innerHTML = `
+    <img src="${image}">
+    `;
+
+    bodyElm.appendChild(appartment);
+  });
