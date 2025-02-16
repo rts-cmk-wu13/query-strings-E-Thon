@@ -18,11 +18,11 @@ fetch(`./data/${id}.json`)
     </div>
 
     <div class="appartment__div--right">
-      <h3>${data.destination}</h3>
+      <h2>${data.destination}</h2>
       <h1>${data.title}</h1>
       <sub>${data.subtitle}</sub>
       <p>${data.text}</p>
-      <h2>Faciliteter</h2>
+      <h3>Faciliteter</h3>
       <ul class="appartment__ul">
         <li>${data.facilities[0]}</li>
         <li>${data.facilities[1]}</li>

@@ -16,7 +16,7 @@ section {
 
 .destination {
     height: 22.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.3rem;
 }
 .destination img {
     height: 18rem;
@@ -28,14 +28,14 @@ section {
     align-items: center;
     background-color: #CEF9FF;
     height: 6rem;
+    padding: 0 1.875rem;
 }
 .destination__div i {
     color: black;
-    font-size: 3rem;
+    font-size: 1rem;
 }
 .destination__div a {
     text-transform: uppercase;
     color: black;
     font-size: 0.875rem;
-    margin-right: 1.875rem;
 }

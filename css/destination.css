@@ -2,7 +2,9 @@
     margin: 0 auto;
     padding: 2.125rem;
     display: flex;
+    align-items: center;
     gap: 4.4375rem;
+    height: fit-content;
 }
 .appartment__div--left {
     flex: 1;
@@ -11,6 +13,7 @@
 }
 .appartment__div--left img {
     grid-area: 1 / 1 / -1 / -1;
+    height: 52rem;
 
 }
 .appartment__div--left p {
@@ -18,6 +21,11 @@
     justify-self: end;
     text-transform: uppercase;
     margin: 1.5625rem 1.9375rem;
+    font-weight: 700;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    height: fit-content;
 }
 .appartment__div--left p i {
     font-size: 2.125rem;
@@ -27,3 +35,33 @@
 .appartment__div--right {
     flex: 1;
 }
+.appartment__div--right h1 {
+    margin: 1.25rem auto 2rem;
+    font-size: 2rem;
+}
+.appartment__div--right h2 {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: normal;
+}
+.appartment__div--right h3 {
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+.appartment__div--right sub {
+    font-size: 1rem;
+    display: block;
+    text-align: center;
+}
+.appartment__div--right p {
+    font-size: 1rem;
+    margin: 2rem auto 2.1875rem;
+}
+.appartment__ul {
+    margin: 1rem 0 0 1.2rem;
+}
+.appartment__ul li {
+    margin-bottom: .5rem;
+}
+
