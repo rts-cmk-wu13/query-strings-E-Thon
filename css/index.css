@@ -1,0 +1,41 @@
+section {
+    margin: 2.3125rem auto 1.5625rem;
+    max-width: 75rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24%, 1fr));
+    grid-template-rows: auto;
+    gap: 1rem;
+}
+
+.section__h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    grid-column: 1 / -1;
+}
+
+.destination {
+    height: 22.5rem;
+    margin-bottom: 1.3rem;
+}
+.destination img {
+    height: 18rem;
+}
+
+.destination__div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #CEF9FF;
+    height: 6rem;
+    padding: 0 1.875rem;
+}
+.destination__div i {
+    color: black;
+    font-size: 1rem;
+}
+.destination__div a {
+    text-transform: uppercase;
+    color: black;
+    font-size: 0.875rem;
+}
