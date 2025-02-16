@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+/* CSS Document */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0 auto;
+}
+main {
+    width: 100%;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}
+
+/* RWD: */
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.grid {
+    display: grid;
+}
+.flex {
+    display: flex;
+}
+.flex1 {
+    flex: 1;
+}
+.flex2 {
+    flex: 2;
+}
+.flex3 {
+    flex: 3;
+}
+.flex4 {
+    flex: 4;
+}
+.flex5 {
+    flex: 5;
+}
+.flex6 {
+    flex: 6;
+}
+
+/* MEDIA QUERIES TABLET */
+@media screen and (max-width: 768px) {
+    main {}
+}
+/* MEDIA QUERIES MOBILE */
+@media screen and (max-width: 360px) {
+    main {}
+}
