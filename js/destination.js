@@ -9,6 +9,7 @@ fetch(`./data/${id}.json`)
   .then((data) => {
     let bodyElm = document.querySelector("body");
     let appartment = document.createElement("div");
+    appartment.classList.add("appartment__div");
 
     appartment.innerHTML = `
     <div class="appartment__div--left">

@@ -52,12 +52,3 @@ img {
 .flex6 {
     flex: 6;
 }
-
-/* MEDIA QUERIES TABLET */
-@media screen and (max-width: 768px) {
-    main {}
-}
-/* MEDIA QUERIES MOBILE */
-@media screen and (max-width: 360px) {
-    main {}
-}
