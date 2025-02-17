@@ -11,7 +11,7 @@ fetch("./data/destinations.json")
           <div class="destination">
             <img src="./img/${destination.image}" alt="${destination.name}">
             <div class="destination__div">
-              <i class="fa-solid fa-heart"></i>
+              <button><i data-favorites="${destination.destination}${destination.id}" class="fa-solid fa-heart"></i></button>
               <a href="destination.html?id=${destination.id}">more
               </a>
             </div>

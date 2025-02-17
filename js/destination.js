@@ -14,7 +14,7 @@ fetch(`./data/${id}.json`)
     appartment.innerHTML = `
     <div class="appartment__div--left">
       <img src="./img/${data.image}" alt="${data.title}">
-      <p><i class="fa-solid fa-heart"></i> favorit</p>
+      <p><i data-favorites="${data.destination}${data.id}" class="fa-solid fa-heart"></i> favorit</p>
     </div>
 
     <div class="appartment__div--right">
@@ -33,4 +33,13 @@ fetch(`./data/${id}.json`)
     `;
 
     bodyElm.appendChild(appartment);
+
+    let heartIcon = document.querySelector(".fa-heart");
+    heartIcon.addEventListener("click", addFavorite);
+    function addFavorite(evt){
+      let currentFavoriteIcon = evt.target.dataset.favorites;
+      favoriteIcon.push(currentFavoriteIcon);
+      localStorage.setItem("favorites", JSON.stringify(favoriteIcon));
+    }
+
   });
