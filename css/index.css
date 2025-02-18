@@ -1,11 +1,6 @@
 section {
     margin: 2.3125rem auto 1.5625rem;
     max-width: 75rem;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24%, 1fr));
-    grid-template-rows: auto;
-    gap: 1rem;
 }
 
 .section__h1 {
@@ -14,10 +9,20 @@ section {
     grid-column: 1 / -1;
 }
 
+.destinations {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24%, 1fr));
+    grid-template-rows: auto;
+    gap: 1rem;
+    margin-bottom: 1.3rem;
+}
+
 .destination {
     height: 22.5rem;
     margin-bottom: 1.3rem;
 }
+
 .destination img {
     height: 18rem;
 }
@@ -30,12 +35,20 @@ section {
     height: 4.75rem;
     padding: 0 1.875rem;
 }
+
 .destination__div i {
     color: black;
     font-size: 1rem;
 }
+
 .destination__div a {
     text-transform: uppercase;
     color: black;
     font-size: 0.875rem;
+}
+
+.destination__favoritebtn {
+    padding: 0;
+    border: none;
+    background-color: transparent;
 }

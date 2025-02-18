@@ -26,6 +26,10 @@ a {
     text-decoration: none;
 }
 
+i {
+    cursor: pointer;
+}
+ 
 /* RWD: */
 img {
     width: 100%;
