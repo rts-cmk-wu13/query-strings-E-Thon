@@ -31,15 +31,32 @@ fetch(`./data/${id}.json`)
         </ul>
     </div>
     `;
+    
+    let favorites = readFromLocalStorage("favorites") || [];
+    let heartIcon = appartment.querySelector("i");
+    let currentId = heartIcon.dataset.favid;
+
+    if (favorites.includes(currentId)) {
+      heartIcon.classList.add("fa-solid");
+      heartIcon.classList.remove("fa-regular");
+      heartIcon.style.color = "red";
+    }
+
+    // Handle the favorite button click event
+    heartIcon.addEventListener("click", function () {
+      if (favorites.includes(currentId)) {
+        favorites = favorites.filter((id) => id != currentId);
+        heartIcon.classList.remove("fa-solid");
+        heartIcon.classList.add("fa-regular");
+        heartIcon.style.color = "black";
+      } else {
+        favorites.push(currentId);
+        heartIcon.classList.add("fa-solid");
+        heartIcon.classList.remove("fa-regular");
+        heartIcon.style.color = "red";
+      }
+      saveToLocalStorage("favorites", favorites);
+    });
 
     bodyElm.appendChild(appartment);
-
-    // let heartIcon = document.querySelector(".fa-heart");
-    // heartIcon.addEventListener("click", addFavorite);
-    // function addFavorite(evt){
-    //   let currentFavoriteIcon = evt.target.dataset.favorites;
-    //   favoriteIcon.push(currentFavoriteIcon);
-    //   localStorage.setItem("favorites", JSON.stringify(favoriteIcon));
-    // }
-
   });

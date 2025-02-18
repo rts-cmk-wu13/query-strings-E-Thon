@@ -1,6 +1,5 @@
 let favorites = readFromLocalStorage("favorites") || [];
 
-
 fetch("./data/destinations.json")
   .then((response) => response.json())
   .then((data) => {
@@ -24,39 +23,41 @@ fetch("./data/destinations.json")
             </div>
           </div>
         `
-      )
+  )
       .join("");
 
-    destinationElm
+      destinationElm
       .querySelectorAll(".destination__favoritebtn")
       .forEach((button) => {
-        button.addEventListener("click", function (event) {
-          let currentId = event.target.dataset.favid;
+        let icon = button.querySelector("i");
+        let currentId = icon.dataset.favid;
 
+        if (favorites.includes(currentId)) {
+          icon.classList.add("fa-solid");
+          icon.classList.remove("fa-regular");
+          icon.style.color = "red";
+        }
+
+        button.addEventListener("click", function (event) {
           if (favorites.includes(currentId)) {
-            let newFavorites = favorites.filter((id) => id != currentId);
-            favorites = newFavorites;
-            event.target.classList.remove("fa-solid");
-            event.target.classList.add("fa-regular");
-            event.target.style.color = "black";
+            favorites = favorites.filter((id) => id != currentId);
+            icon.classList.remove("fa-solid");
+            icon.classList.add("fa-regular");
+            icon.style.color = "black";
           } else {
             favorites.push(currentId);
-            event.target.classList.add("fa-solid");
-            event.target.classList.remove("fa-regular");
-            event.target.style.color = "red";
+            icon.classList.add("fa-solid");
+            icon.classList.remove("fa-regular");
+            icon.style.color = "red";
           }
-
           saveToLocalStorage("favorites", favorites);
-
-          console.log(favorites);
         });
       });
+
 
     sectionElm.appendChild(destinationElm);
 
     document.querySelector("#root").append(sectionElm);
   });
-
-
 
   // note to self: favoritternes farve og ikon indlæses ikke automatisk, når siden refresher.
