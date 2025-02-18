@@ -21,5 +21,6 @@ fetch("./data/destinations.json")
       .join("");
 
     sectionElm.innerHTML += destinationsElm;
+
     document.querySelector("#root").append(sectionElm);
   });
