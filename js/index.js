@@ -6,6 +6,10 @@ fetch("./data/destinations.json")
     let sectionElm = document.createElement("section");
     sectionElm.innerHTML = `         
     <h1 class="section__h1">Apartments for rent</h1>
+    <form class="switch" action="#" method="post">
+            <input type="checkbox" name="switch" id="switch" value="false" switch>
+            <label class="switch__txt" for="switch">Dark mode </label>
+        </form>
     `;
     let destinationElm = document.createElement("div");
     destinationElm.classList.add("destinations");
@@ -23,10 +27,10 @@ fetch("./data/destinations.json")
             </div>
           </div>
         `
-  )
+      )
       .join("");
 
-      destinationElm
+    destinationElm
       .querySelectorAll(".destination__favoritebtn")
       .forEach((button) => {
         let icon = button.querySelector("i");
@@ -54,10 +58,9 @@ fetch("./data/destinations.json")
         });
       });
 
-
     sectionElm.appendChild(destinationElm);
+   
 
     document.querySelector("#root").append(sectionElm);
+    darkLight()
   });
-
-  // note to self: favoritternes farve og ikon indlæses ikke automatisk, når siden refresher.
