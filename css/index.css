@@ -3,6 +3,10 @@ section {
     max-width: 75rem;
 }
 
+.switch {
+    text-align: end;
+}
+
 .section__h1 {
     font-size: 3rem;
     font-weight: 900;
@@ -31,7 +35,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #CEF9FF;
+    background-color: light-dark(#CEF9FF, #384445);
     height: 4.75rem;
     padding: 0 1.875rem;
 }
