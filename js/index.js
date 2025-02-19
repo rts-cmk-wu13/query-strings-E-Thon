@@ -5,11 +5,12 @@ fetch("./data/destinations.json")
   .then((data) => {
     let sectionElm = document.createElement("section");
     sectionElm.innerHTML = `         
-    <h1 class="section__h1">Apartments for rent</h1>
     <form class="switch" action="#" method="post">
-            <input type="checkbox" name="switch" id="switch" value="false" switch>
             <label class="switch__txt" for="switch">Dark mode </label>
+            <input type="checkbox" name="switch" id="switch" value="false" switch class="switch__check">
+            <span class="slider"></span> 
         </form>
+    <h1 class="section__h1">Apartments for rent</h1>
     `;
     let destinationElm = document.createElement("div");
     destinationElm.classList.add("destinations");
